@@ -1,0 +1,184 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+h1,h2,h3,footer{
+    text-align:center;
+    
+}
+
+h1,h2,h3,nav{
+font-family: 'PT Sans', sans-serif;
+}
+
+header{
+    width:100%;
+}
+#header-img img{
+    position:relative;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+#header-img h1{
+    color:white;
+    text-transform: uppercase;
+    cursor:default;
+position:absolute;
+font-size: 2rem;
+width:100%;
+margin:0;
+left:0;
+right:0;
+}
+
+
+/* NAV */
+nav{
+    width:100%;
+}
+nav a{
+    width:40px;
+    text-decoration:none;
+    font-size: larger;
+}
+
+nav ul{
+    list-style: none; 
+    width:100%;
+}
+
+nav ul li{
+    padding:0.5%;
+    text-transform: uppercase;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:2%;
+    font-size:small;
+}
+
+
+@media screen and (min-width:400px){
+#header-img h1{
+    position:absolute;
+    top:10%;
+    left:0;
+}
+
+/* img */
+.images{
+    display:grid;
+    grid-template-rows: 100%;
+}
+
+.images img{
+    width:95%;
+    border-bottom: 1px dotted navy;
+    padding:2%;
+}
+
+
+
+
+/* NAV */
+nav ul li{
+   display:block; 
+ padding:4%;      
+}
+
+nav a{
+    width:40px;
+    color:navy;
+    border-bottom:2px solid green;
+}
+nav a:hover{
+    border-bottom:none;
+}
+
+/* GRID */
+.container{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+}
+#header-img{
+    grid-column-start:1;
+    grid-column-end:span 4;
+}
+
+.nav{
+    grid-column:1;
+    grid-row:2 /span 2;
+}
+
+.images{
+    grid-column:2;
+    grid-row:2/span 4;
+}
+.footer{
+    grid-column:1;
+    grid-row:4;
+}
+
+}
+
+@media screen and (min-width:800px){
+    #header-img h1{
+        color:white;
+        font-size:3em;
+        text-align:left;
+        top:10%;
+}
+
+
+nav a{
+    color:white;
+    border-bottom:none;
+}
+
+
+nav a:hover{
+    border-bottom:2px solid green;
+}
+
+nav{
+    width:100%;
+    list-style: none; 
+    position:absolute;
+    text-align:left;
+    top: 20%;
+}
+
+nav ul li{
+    font-size: 1em;
+    font-weight:bold;
+    display:inline-block;
+    padding:5%;
+}
+
+/* img */
+.images{
+    grid-column:1/span 4;
+    grid-row: 2;
+}
+.images img{
+    width:45%;
+}
+
+/* GRID */
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.footer{
+    grid-row: 5;
+}
+}
